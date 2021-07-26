@@ -155,6 +155,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="z61-B1-Fyy">
+                                <rect key="frame" x="0.0" y="122" width="414" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.04715064913" green="0.029414169489999999" blue="0.1038929299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="ZOp-dF-za6"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Pk6-AU-1Ip">
+                                    <size key="itemSize" width="121" height="120"/>
+                                    <size key="estimatedItemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellPerson" id="Qt0-c4-vfq" customClass="PersonViewCell" customModule="theDailyProphet_HP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="8.5" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Re5-5g-UPv">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aFo-HG-UcS">
+                                                    <rect key="frame" x="-100.5" y="-40" width="321" height="200"/>
+                                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <imageReference key="image" image="grifinoria"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aFo-HG-UcS" firstAttribute="centerX" secondItem="Re5-5g-UPv" secondAttribute="centerX" id="IcN-kv-bJG"/>
+                                                <constraint firstItem="aFo-HG-UcS" firstAttribute="centerY" secondItem="Re5-5g-UPv" secondAttribute="centerY" id="WAb-Ba-hHh"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="120" height="120"/>
+                                        <connections>
+                                            <outlet property="imageViewPerson" destination="aFo-HG-UcS" id="HUE-2T-yax"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="m8B-N7-wOE" id="D6w-kK-MHN"/>
+                                    <outlet property="delegate" destination="m8B-N7-wOE" id="qEe-PH-2zE"/>
+                                </connections>
+                            </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Houses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjF-YT-JzQ">
                                 <rect key="frame" x="164.5" y="316.5" width="85.5" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -176,7 +221,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellHouse" id="Jyk-vS-2Og" customClass="MyCollectionViewCell" customModule="theDailyProphet_HP" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellHouse" id="Jyk-vS-2Og" customClass="HouseViewCell" customModule="theDailyProphet_HP" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="22" width="281" height="157"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="urA-zH-Dmm">
@@ -197,7 +242,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="281" height="157"/>
                                         <connections>
-                                            <outlet property="imageViewHouse" destination="r9I-qY-rTt" id="Vkh-WP-StM"/>
+                                            <outlet property="imageViewHouse" destination="r9I-qY-rTt" id="KcN-ua-BEQ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -212,51 +257,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" id="z61-B1-Fyy">
-                                <rect key="frame" x="0.0" y="122" width="414" height="137"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.04715064913" green="0.029414169489999999" blue="0.1038929299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="ZOp-dF-za6"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Pk6-AU-1Ip">
-                                    <size key="itemSize" width="121" height="120"/>
-                                    <size key="estimatedItemSize" width="150" height="150"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellPerson" id="Qt0-c4-vfq" customClass="MyCollectionViewCell" customModule="theDailyProphet_HP" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="8.5" width="120" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Re5-5g-UPv">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aFo-HG-UcS">
-                                                    <rect key="frame" x="-100.5" y="-40" width="321" height="200"/>
-                                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <imageReference key="image" image="grifinoria"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="aFo-HG-UcS" firstAttribute="centerX" secondItem="Re5-5g-UPv" secondAttribute="centerX" id="IcN-kv-bJG"/>
-                                                <constraint firstItem="aFo-HG-UcS" firstAttribute="centerY" secondItem="Re5-5g-UPv" secondAttribute="centerY" id="WAb-Ba-hHh"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="120" height="120"/>
-                                        <connections>
-                                            <outlet property="imageViewHouse" destination="aFo-HG-UcS" id="KQ6-qs-QYA"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="m8B-N7-wOE" id="D6w-kK-MHN"/>
-                                    <outlet property="delegate" destination="m8B-N7-wOE" id="qEe-PH-2zE"/>
-                                </connections>
-                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6fK-Ps-jg7"/>
                         <color key="backgroundColor" red="0.047068066899999997" green="0.033424969759999999" blue="0.1038373932" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

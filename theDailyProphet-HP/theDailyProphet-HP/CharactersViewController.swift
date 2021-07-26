@@ -16,12 +16,13 @@ class CharactersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.charactersTableView.register(UINib(nibName: "cellCharacters", bundle: nil), forCellReuseIdentifier: "IdCell")
-        
         charactersTableView.dataSource = self
         charactersTableView.delegate = self
-        
+        loadCharacter()
+    }
+    
+    func loadCharacter() {
         APIService.getCharacteres(completion: {data,error,array in
             self.arrayCharacteres = array
             DispatchQueue.main.async {
@@ -29,8 +30,6 @@ class CharactersViewController: UIViewController {
             }
         })
     }
-    
-
 }
 
 extension CharactersViewController: UITableViewDataSource, UITableViewDelegate {
@@ -46,22 +45,11 @@ extension CharactersViewController: UITableViewDataSource, UITableViewDelegate {
             cell.labelAge.text = charac.dateOfBirth
             cell.labelHouse.text = charac.house
             cell.labelPatronus.text = charac.patronus
-          
-            if let url = URL(string: charac.image) {
-                let task = URLSession.shared.dataTask(with: url) { data, response, error in
-                    guard let data = data, error == nil else { return }
 
-                    DispatchQueue.main.async {
-                        cell.characterImageView.image = UIImage(data: data)
-                    }
-                }
-
-                task.resume()
-            }
+            cell.downloadImage(urlImage: charac.image)
             return cell
         }
-            
         return UITableViewCell()
-        }
-
+    }
+    
 }

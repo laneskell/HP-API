@@ -20,9 +20,9 @@
 		8E61AFEC26AA7F730080ACA4 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61AFEB26AA7F730080ACA4 /* Type.swift */; };
 		8E61AFEF26AAFDE10080ACA4 /* cellCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61AFED26AAFDE10080ACA4 /* cellCharacters.swift */; };
 		8E61AFF026AAFDE10080ACA4 /* cellCharacters.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E61AFEE26AAFDE10080ACA4 /* cellCharacters.xib */; };
-		8E61AFF226AB252E0080ACA4 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61AFF126AB252E0080ACA4 /* MyCollectionViewCell.swift */; };
 		8E61AFF426AB28540080ACA4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61AFF326AB28540080ACA4 /* HomeViewController.swift */; };
-		8E61AFF626AB4FF40080ACA4 /* PersonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61AFF526AB4FF40080ACA4 /* PersonCollectionViewCell.swift */; };
+		8E61AFF826AF07020080ACA4 /* PersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61AFF726AF07020080ACA4 /* PersonViewCell.swift */; };
+		8E61AFFA26AF077B0080ACA4 /* HouseViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E61AFF926AF077B0080ACA4 /* HouseViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +60,9 @@
 		8E61AFEB26AA7F730080ACA4 /* Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
 		8E61AFED26AAFDE10080ACA4 /* cellCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellCharacters.swift; sourceTree = "<group>"; };
 		8E61AFEE26AAFDE10080ACA4 /* cellCharacters.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellCharacters.xib; sourceTree = "<group>"; };
-		8E61AFF126AB252E0080ACA4 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E61AFF326AB28540080ACA4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		8E61AFF526AB4FF40080ACA4 /* PersonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCollectionViewCell.swift; sourceTree = "<group>"; };
+		8E61AFF726AF07020080ACA4 /* PersonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewCell.swift; sourceTree = "<group>"; };
+		8E61AFF926AF077B0080ACA4 /* HouseViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +122,8 @@
 				8E61AFEE26AAFDE10080ACA4 /* cellCharacters.xib */,
 				8E10755126A9B43F001F68CA /* APIService.swift */,
 				8E10752526A88BBE001F68CA /* Main.storyboard */,
-				8E61AFF126AB252E0080ACA4 /* MyCollectionViewCell.swift */,
-				8E61AFF526AB4FF40080ACA4 /* PersonCollectionViewCell.swift */,
+				8E61AFF726AF07020080ACA4 /* PersonViewCell.swift */,
+				8E61AFF926AF077B0080ACA4 /* HouseViewCell.swift */,
 				8E61AFEB26AA7F730080ACA4 /* Type.swift */,
 				8E10752826A88BBF001F68CA /* Assets.xcassets */,
 				8E10752A26A88BBF001F68CA /* LaunchScreen.storyboard */,
@@ -282,14 +282,14 @@
 			files = (
 				8E10752426A88BBE001F68CA /* ViewController.swift in Sources */,
 				8E10755226A9B43F001F68CA /* APIService.swift in Sources */,
-				8E61AFF226AB252E0080ACA4 /* MyCollectionViewCell.swift in Sources */,
 				8E10754E26A9A572001F68CA /* CharactersViewController.swift in Sources */,
 				8E61AFEF26AAFDE10080ACA4 /* cellCharacters.swift in Sources */,
 				8E61AFF426AB28540080ACA4 /* HomeViewController.swift in Sources */,
 				8E61AFEC26AA7F730080ACA4 /* Type.swift in Sources */,
 				8E10752026A88BBE001F68CA /* AppDelegate.swift in Sources */,
 				8E10752226A88BBE001F68CA /* SceneDelegate.swift in Sources */,
-				8E61AFF626AB4FF40080ACA4 /* PersonCollectionViewCell.swift in Sources */,
+				8E61AFF826AF07020080ACA4 /* PersonViewCell.swift in Sources */,
+				8E61AFFA26AF077B0080ACA4 /* HouseViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

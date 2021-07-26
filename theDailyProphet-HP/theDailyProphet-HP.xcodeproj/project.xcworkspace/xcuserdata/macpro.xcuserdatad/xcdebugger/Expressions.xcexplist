@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "cellCharacters.downloadImage():cellCharacters.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "urlImage">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "CharactersViewController.tableView(_:cellForRowAt:):CharactersViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -22,6 +30,15 @@
       <ContextState
          contextName = "HomeViewController.collectionView(_:cellForItemAt:):HomeViewController.swift">
          <PersistentStrings>
+            <PersistentString
+               value = "UIImage(named: &quot;lufalufa&quot;)">
+            </PersistentString>
+            <PersistentString
+               value = "UIImage(named: personImages[indexPath.row])">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
             <PersistentString
                value = "housesImages[indexPath.row]">
             </PersistentString>
