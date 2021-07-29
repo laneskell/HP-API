@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 class CharactersViewController: UIViewController {
-//    var personImages:[String] = ["lufalufa", "grifinoria", "corvinal", "sonserina"]
 
     @IBOutlet weak var charactersTableView: UITableView!
     var arrayCharacteres: [Character] = []
@@ -45,7 +44,6 @@ extension CharactersViewController: UITableViewDataSource, UITableViewDelegate {
             cell.labelAge.text = charac.dateOfBirth
             cell.labelHouse.text = charac.house
             cell.labelPatronus.text = charac.patronus
-
             cell.downloadImage(urlImage: charac.image)
             return cell
         }

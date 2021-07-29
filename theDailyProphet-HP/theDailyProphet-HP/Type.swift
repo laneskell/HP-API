@@ -22,3 +22,11 @@ class character {
         self.patronus = patronus
     }
 }
+
+class Person {
+    var image: String!
+    
+    init(image: String) {
+        self.image = image
+    }
+}
